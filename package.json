@@ -25,6 +25,14 @@
   },
   "author": "JuanLuisClaure <juanluisclaure24@live.com>",
   "license": "MIT",
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "latest",
+    "gulp-eslint": "latest",
+    "webpack": "2.1.0-beta.26",
+    "webpack-stream": "latest"
+  },
   "devDependencies": {
     "babel-core": "6.18.2",
     "babel-loader": "6.2.7",
@@ -32,15 +40,16 @@
     "babel-preset-latest": "^6.16.0",
     "babel-runtime": "latest",
     "css-loader": "^0.25.0",
-    "del": "^2.2.2",
+    "eslint": "3.10.2",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "2.2.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
-    "gulp": "^3.9.1",
-    "gulp-babel": "latest",
+    "gulp-stylelint": "3.4.0",
     "minimatch": "3.0.2",
     "node-sass": "^3.13.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "2.1.0-beta.26",
-    "webpack-stream": "latest"
+    "stylelint": "7.5.0",
+    "stylelint-rscss": "latest"
   }
 }

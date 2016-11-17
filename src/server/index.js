@@ -1,2 +1,1 @@
-console.log('hola mundo como es?????')
-console.log('hola mundo como es?????')
+console.log('"validateLineBreaks": "LF"')

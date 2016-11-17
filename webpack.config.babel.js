@@ -1,11 +1,19 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
 export default {
+  resolve: {
+
+    extensions: ['.js','.scss'],
+
+  },
   entry: {
        app: './src/client/app/app.js',
        www: './src/client/app/vndr.js'
 
      },
   output: {
+
     filename: '[name].js',
     sourceMapFilename: '[name].map',
   },
@@ -28,7 +36,10 @@ export default {
             exclude: /node_modules/,
             loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
-              loader: "css-loader!sass-loader",
+              loader:[
+                      {loader:"css-loader", query:{ modules: false }},
+                      "sass-loader",
+                      ]
             })
           }
 
@@ -37,20 +48,21 @@ export default {
   },
 
   plugins: [
+    new webpack.LoaderOptionsPlugin({
 
+      minimize: false,
+      debug: false,
+
+
+       }),
      new ExtractTextPlugin({
        filename: "[name].css",
        disable: false,
        allChunks: true
      }),
 
-   ],
-
-  resolve: {
-
-    extensions: ['.js','scss']
+   ]
 
 
-  },
 
 };
