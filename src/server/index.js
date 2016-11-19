@@ -1,1 +1,2 @@
-console.log('"validateLineBreaks": "LF"')
+
+// @flow
